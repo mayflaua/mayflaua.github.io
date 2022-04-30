@@ -1,10 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/text-styles.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>HOME</title>
 </head>
 <body>
-
+    <div class="page-container">
+        <!--Header navigation menu-->
+        <nav class="header">
+            <a href="#" class="header-name header-link label">sweetie</a>
+            <div class="container">
+                <div class="header-nav">
+                    <!--selected current page-->
+                    <a href="#" class="header-nav__item header_nav__item-selected header-link label">_hello</a>
+                    <a href="#" class="header-nav__item header-link label">_about-me</a>
+                    <a href="#" class="header-nav__item header-link label">_projects</a>
+                </div>
+            </div>
+            <a href="#" class="header-nav__contact header-link label">_contact-me</a>
+        </nav>
+        <!--Home page content container-->
+        <main class="container">
+            <div class="content">
+                <div class="greeting">
+                    <div class="greeting-title">
+                        <span class="greeting-title__hi body-text">Hi all. I am</span>
+                        <span class="greeting-title__name headline">Daniil Sweetie</span>
+                        <span class="greeting-title__dev sub-headline">> Front-end developer</span>
+                    </div>
+                    <div class="greeting-subtitle">
+                        <span class="greeting-subtitle__game-tip label">// complete the game to continue</span>
+                        <span class="greeting-subtitle__git-tip label">// you can also see it on my GitHub page</span>
+                        <a href="#" class="greeting-subtitle__git-link label ">
+                            <span class="greeting-subtitle__git-link_blue">const</span>
+                            <span class="greeting-subtitle__git-link_green">githubLink</span>
+                            =
+                            <span class="greeting-subtitle__git-link_red-link">“https://github.com/example/url”</span>
+                        </a>
+                    </div>
+                </div>
+                <img src="img/home/snakegame-snippet.png" alt="" class="snake-game">
+            </div>
+        </main>
+        <!--Footer-->
+        <footer class="footer">
+            <div class="footer__find-me label">find me in:</div>
+            <a href="#" class="footer__link footer__link-tw"></a>
+            <a href="#" class="footer__link footer__link-fb"></a>
+            <a href="#" class="footer__link footer__link-gh label"><span>@mayflaua</span></a>
+        </footer>
+    </div>
 </body>
 </html>
