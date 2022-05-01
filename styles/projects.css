@@ -1,0 +1,129 @@
+body, html {
+  font-family: "Fira Code", monospace;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #010C15;
+  padding: 4%;
+}
+
+.container {
+  width: 55%;
+  margin: 0 auto;
+}
+
+.page-container {
+  max-height: 92%;
+  border: 1px solid #1E2D3D;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 8px;
+  background: #011627;
+  background-size: 780px;
+}
+
+.projects-nav {
+  width: 25%;
+}
+
+.nav-tree__title {
+  color: white;
+  padding: 10px 15px;
+  text-align: left;
+  border-bottom: 1px solid #1E2D3D;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.nav-tree__title:before {
+  margin-right: 10px;
+  content: "";
+  font-size: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7.4px 4.25px 0 4.25px;
+  border-color: #ffffff transparent transparent transparent;
+}
+.nav-tree-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.nav-tree-content__item {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  cursor: pointer;
+  padding: 17px 22px;
+  color: #607B96;
+}
+.nav-tree-content__item_selected, .nav-tree-content__item:hover {
+  color: white;
+  background-color: none;
+}
+.nav-tree-content__item_react {
+  background-image: url(/img/projects/react.png);
+  background-repeat: no-repeat;
+  background-position: 60px 50%;
+}
+.nav-tree-content__item_html {
+  background-image: url(/img/projects/html.png);
+  background-repeat: no-repeat;
+  background-position: 60px 50%;
+}
+.nav-tree-content__item_css {
+  background-image: url(/img/projects/css.png);
+  background-repeat: no-repeat;
+  background-position: 60px 50%;
+}
+.nav-tree-content__item_vue {
+  background-image: url(/img/projects/vue.png);
+  background-repeat: no-repeat;
+  background-position: 60px 50%;
+}
+.nav-tree-content__item_angular {
+  background-image: url(/img/projects/angular.png);
+  background-repeat: no-repeat;
+  background-position: 60px 50%;
+}
+.nav-tree-content__item_flutter {
+  background-image: url(/img/projects/flutter.png);
+  background-repeat: no-repeat;
+  background-position: 60px 50%;
+}
+.nav-tree-content__checkbox {
+  background: #011627;
+  border: 1px solid #607B96;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 2px;
+  opacity: 1;
+  padding: 9px;
+  margin-right: 48px;
+}
+.nav-tree-content__checkbox:hover {
+  outline: 1.5px solid #607B96;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.nav-tree-content__checkbox_selected {
+  background-image: url(/img/projects/checkbox.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.nav-tree-content .checkbox-hidden {
+  display: none;
+}
+
+.content {
+  border-left: 1px solid #1E2D3D;
+}
