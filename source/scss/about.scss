@@ -83,9 +83,6 @@ body {
   background-position: center;
 }
 
-.nav {
-}
-
 .nav-tree__title {
   color: white;
   text-align: left;
@@ -106,6 +103,23 @@ body {
 }
 
 .nav-tree {
+  &__markdown {
+    transition: all 0.3s linear;
+    background-image: url(/img/about/md-icon.png);
+    background-repeat: no-repeat;
+    background-position: 10%;
+    color: #607B96;
+    height: 22px;
+    &:before {
+      content: '>';
+      visibility: hidden;
+      margin-right: 30px; 
+    }
+
+    &:hover {
+      color: white;
+    }
+  }
   &-content {
     padding: 22px 0 27px 16px;
     border-bottom: $border;
@@ -113,14 +127,11 @@ body {
   }
   &__folder {
     color: #607B96;
-    &_current {
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+
+    &:hover {
       color: white;
-    }
-    &:before {
-      color: #607B96;
-      content: '>';
-      margin-right: 30px;
-      display: inline-block;
     }
   }
 
@@ -129,6 +140,7 @@ body {
     background-image: url(/img/about/red-folder.png);
     background-repeat: no-repeat;
     background-position: 10%;
+    
   }
 
   // .nav-tree__interests
@@ -142,37 +154,10 @@ body {
   &__education {
     background-image: url(/img/about/blue-folder.png);
     background-repeat: no-repeat;
-    background-position: 10% 5%;
-    color: #607B96;
-
-    &:before {
-      transform: rotate(90deg);
-    }
-
-    *:before {
-      content: '>';
-      margin-right: 30px;
-      visibility: hidden;
-    }
-
-    &_school {
-      background-image: url(/img/about/md-icon.png);
-      background-repeat: no-repeat;
-      background-position: 10%;
-    }
-
-    // .nav-tree__education_university
-    &_university {
-      background-image: url(/img/about/md-icon.png);
-      background-repeat: no-repeat;
-      background-position: 10%;
-    }
+    background-position: 10%;
   }
 }
 
-.nav-tab {
-
-}
 
 .nav-contacts {
 
@@ -213,11 +198,14 @@ body {
   color: #607B96;
   border-right: $border;
   width: 260px;
-
+  visibility: hidden;
+  display: flex;
+  justify-content: space-between;
+  
   &:before {
     // white triangle arrow
     margin-right: 10px;
-    content: '456';
+    content: '';
     font-size: 0;
     width: 0;
     height: 0;
@@ -238,7 +226,7 @@ body {
   &-slider {
     width: 25px;
     min-height: 100%;
-
+    visibility: hidden;
     box-sizing: border-box;
     border-left: $border;
 
@@ -252,6 +240,7 @@ body {
 
 
 .content-window-text {
+  min-height: 500px;
   display: block;
   color: #607B96;
   list-style-type: none;
@@ -283,5 +272,22 @@ body {
   color: #607B96;
   font-size: 16px;
   font-weight: 800;
-  margin-left: 50px;
+  margin-right: 10px;
+}
+
+.folder-arrow {
+  display: inline-block;
+  margin-right: 30px;
+  transition: all 0.3s ease-out;
+
+  &_opened {
+    transform: rotate(90deg);
+  }
+}
+
+.invisible {
+  visibility: hidden;
+  height: 0;
+  opacity: 0;
+  transition: all 0.3s ease-out;
 }

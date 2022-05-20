@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="script/about.js" defer></script>
     <title>About me</title>
 </head>
 <body>
@@ -29,20 +30,27 @@
         <main class="about">
             <nav class="about-nav">
                 <aside class="aside-nav">
-                    <button class="aside-button aside-prof-info"></button>
-                    <button class="aside-button aside-pers-info aside-button_current"></button>
-                    <button class="aside-button aside-hobbies"></button>
+                    <button title="Professional information" class="aside-button aside-prof-info"></button>
+                    <button title="Personal information" class="aside-button aside-pers-info aside-button_current"></button>
+                    <button title="Hobbies" class="aside-button aside-hobbies"></button>
                 </aside>
                 <div class="nav">
                     <div class="nav-tree label nav-tab">
                         <div class="nav-tree__title label">personal-info</div>
                         <div class="nav-tree-content">
-                            <div class="nav-tree__folder nav-tree__bio label nav-tree__folder_current">bio</div>
-                            <div class="nav-tree__folder nav-tree__interests label">interests</div>
-                            <div class="nav-tree__folder nav-tree__education label">education
-                                <div class="nav-tree__education nav-tree__education_school">high-school</div>
-                                <div class="nav-tree__education nav-tree__education_university">university</div>
-                            </div>
+
+                            <div class="nav-tree__folder nav-tree__bio label"><span class="folder-arrow">></span>bio</div>
+                              <div class="nav-tree__bio_childhood nav-tree__markdown label invisible">childhood</div>
+                              <div class="nav-tree__bio_present nav-tree__markdown label invisible">present</div>
+
+                            <div class="nav-tree__folder nav-tree__interests label"><span class="folder-arrow">></span>interests</div>
+                              <div class="nav-tree__interests_code nav-tree__markdown label invisible">coding</div>
+                              <div class="nav-tree__interests_tech nav-tree__markdown label invisible">tech</div>
+
+                            <div class="nav-tree__folder nav-tree__education label"><span class="folder-arrow">></span>education</div>
+                              <div class="nav-tree__markdown nav-tree__education_school label invisible">high-school</div>
+                              <div class="nav-tree__markdown nav-tree__education_university label invisible">university</div>
+                            
                         </div>
                     </div>
                     <div class="nav-title label"></div>
@@ -59,22 +67,7 @@
                     </div>
                     <div class="content-window">
                         <ol class="content-window-text body-text">
-                            <li class="content-window-text__stroke">Lorem ipsum dolor sit amet.</li>
-                            <li class="content-window-text__stroke">Lorem ipsum dolor sit amet.</li>
-                            <li class="content-window-text__stroke">Lorem ipsum dolor sit amet.</li>
-                            <li class="content-window-text__stroke">Lorem ipsum dolor sit amet.</li>
-                            <li class="content-window-text__stroke">Lorem ipsum dolor sit amet.</li>
-                            <li class="content-window-text__stroke">Lorem ipsum dolor sit amet.</li>
-                            <li class="content-window-text__stroke">Lorem ipsum dolor sit amet.</li>
-                            <li class="content-window-text__stroke">Lorem ipsum dolor sit amet.</li>
-                            <li class="content-window-text__stroke">Lorem ipsum dolor sit amet.</li>
-                            <li class="content-window-text__stroke">Lorem ipsum dolor sit amet.</li>
-                            <li class="content-window-text__stroke">Lorem ipsum dolor sit amet.</li>
-                            <li class="content-window-text__stroke">Lorem ipsum dolor sit amet.</li>
-                            <li class="content-window-text__stroke">Lorem ipsum dolor sit amet.</li>
-                            <li class="content-window-text__stroke">Lorem ipsum dolor sit amet.</li>
-                            <li class="content-window-text__stroke">Lorem ipsum dolor sit amet.</li>
-                            <li class="content-window-text__stroke">Lorem ipsum dolor sit amet.</li>
+                           
                         </ol>
                     <div class="content-window-slider">
                         <div class="content-window-slider__slider"></div>
