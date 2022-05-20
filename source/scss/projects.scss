@@ -16,6 +16,12 @@ body {
   margin: 0 auto;
 }
 
+.projects {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .page-container {
   max-height: 92%;
   border: 1px solid #1E2D3D;
@@ -132,4 +138,10 @@ body {
 
 .content {
   border-left: $border;
+  width: 75%;
+
+  &-text {
+    text-align: center;
+    padding: 25%;
+  }
 }
