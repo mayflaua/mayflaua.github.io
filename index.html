@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/snake.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/text-styles.css">
     <link rel="stylesheet" href="styles/header.css">
@@ -9,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="script/snake.js" async></script>
     <title>HOME</title>
 </head>
 <body>
@@ -17,7 +19,7 @@
         <nav class="header">
             <a href="#" class="header-name header-link label">sweetie</a>
             
-            <div class="header-nav">
+            <div class="header-nav hidden">
                 <!--selected current page-->
                 <a href="index.html" class="header-nav__item header_nav__item-selected header-link label">_hello</a>
                 <a href="about.html" class="header-nav__item header-link label">_about-me</a>
@@ -37,15 +39,47 @@
                     <div class="greeting-subtitle">
                         <span class="greeting-subtitle__game-tip label">// complete the game to continue</span>
                         <span class="greeting-subtitle__git-tip label">// you can also see it on my GitHub page</span>
-                        <a href="#" class="greeting-subtitle__git-link label ">
+                        <a target="_blank" href="https://github.com/mayflaua" class="greeting-subtitle__git-link label ">
                             <span class="greeting-subtitle__git-link_blue">const</span>
                             <span class="greeting-subtitle__git-link_green">githubLink</span>
                             =
-                            <span class="greeting-subtitle__git-link_red-link">“https://github.com/example/url”</span>
+                            <span class="greeting-subtitle__git-link_red-link">“https://github.com/mayflaua”</span>
                         </a>
                     </div>
                 </div>
-                <img src="img/home/snakegame-snippet.png" alt="" class="snake-game">
+                <div class="snake-game">
+                  <div class="snake-game__game">
+                    <canvas id="snake" width="240" height="420">snake game</canvas>
+                    <button id="start-game__button" class="start-game__button play-again-button">start-game
+                    </button>
+                    <div id="game-over" class="game-over" hidden>game over!</div>
+                  </div>
+                  <div class="snake-game__info">
+                    <div class="snake-game__info_arrows">
+                      <div class="snake-game__info_arrows-text code-snippet">// use keyboard</div>
+                      <div class="snake-game__info_arrows-text code-snippet">// arrows to play</div>
+                      <div class="snake-game__info_arrows-arrowup"></div>
+                      <div class="snake-game__info_arrows-arrowleft"></div>
+                      <div class="snake-game__info_arrows-arrowdown"></div>
+                      <div class="snake-game__info_arrows-arrowright"></div>
+
+                    </div>
+                  <div class="snake-game__info_foodleft code-snippet">// food left</div>
+                  <div class="snake-game__info_foods">
+                    <div class="snake-game__info_foods-food"></div>
+                    <div class="snake-game__info_foods-food"></div>
+                    <div class="snake-game__info_foods-food"></div>
+                    <div class="snake-game__info_foods-food"></div>
+                    <div class="snake-game__info_foods-food"></div>
+                    <div class="snake-game__info_foods-food"></div>
+                    <div class="snake-game__info_foods-food"></div>
+                    <div class="snake-game__info_foods-food"></div>
+                    <div class="snake-game__info_foods-food"></div>
+                    <div class="snake-game__info_foods-food"></div>
+                  </div>
+                  <button class="skip code-snippet">skip</button>
+                </div>
+                </div>
             </div>
         </main>
         <!--Footer-->
@@ -53,7 +87,7 @@
             <div class="footer__find-me label">find me in:</div>
             <a href="#" class="footer__link footer__link-tw"></a>
             <a href="#" class="footer__link footer__link-fb"></a>
-            <a href="#" class="footer__link footer__link-gh label"><span>@mayflaua</span></a>
+            <a target="_blank" href="https://github.com/mayflaua" class="footer__link footer__link-gh label"><span>@mayflaua</span></a>
         </footer>
     </div>
 </body>

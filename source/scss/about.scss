@@ -89,17 +89,11 @@ body {
   border-bottom: $border;
   box-sizing: border-box;
   padding: 10px 15px;
-  &:before {
-    // white triangle arrow
-    margin-right: 10px;
-    content: '';
-    font-size: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 7.4px 4.25px 0 4.25px;
-    border-color: #ffffff transparent transparent transparent;
-  }
+  cursor: pointer;
+}
+
+.nav {
+  min-width: 250px;
 }
 
 .nav-tree {
@@ -110,10 +104,11 @@ body {
     background-position: 10%;
     color: #607B96;
     height: 22px;
+    cursor: pointer;
     &:before {
       content: '>';
       visibility: hidden;
-      margin-right: 30px; 
+      margin-right: 35px; 
     }
 
     &:hover {
@@ -124,6 +119,8 @@ body {
     padding: 22px 0 27px 16px;
     border-bottom: $border;
     box-sizing: border-box;
+    transition: all 0.3s linear;
+
   }
   &__folder {
     color: #607B96;
@@ -136,10 +133,10 @@ body {
   }
 
   // .nav-tree__bio
-  &__bio {
+  &__bio, &__work {
     background-image: url(/img/about/red-folder.png);
     background-repeat: no-repeat;
-    background-position: 10%;
+    background-position: 8%;
     
   }
 
@@ -147,24 +144,23 @@ body {
   &__interests {
     background-image: url(/img/about/green-folder.png);
     background-repeat: no-repeat;
-    background-position: 10%;
+    background-position: 8%;
   }
 
   // .nav-tree__education
   &__education {
     background-image: url(/img/about/blue-folder.png);
     background-repeat: no-repeat;
-    background-position: 10%;
+    background-position: 8%;
   }
 }
 
 
 .nav-contacts {
-
   // .nav-contacts__email
   &__email {
     color: #607B96;
-
+    transition: all 0.3s ease-out;
     padding-left: 38px;
     margin-top: 18px;
 
@@ -176,7 +172,7 @@ body {
   // .nav-contacts__phone
   &__phone {
     color: #607B96;
-
+    transition: all 0.3s ease-out;
     padding-left: 38px;
     margin-top: 9px;
 
@@ -290,4 +286,26 @@ body {
   height: 0;
   opacity: 0;
   transition: all 0.3s ease-out;
+  margin: 0;
+  padding: 0;
+}
+
+.cat-arrow {
+    transition: all 0.3s ease-out;
+    // white triangle arrow
+    display: inline-block;
+    margin-right: 10px;
+    content: '';
+    font-size: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7.4px 4.25px 0 4.25px;
+    border-color: #ffffff transparent transparent transparent;
+    transform: rotate(-90deg);
+
+
+    &_opened {
+      transform: rotate(0deg);
+    }
 }

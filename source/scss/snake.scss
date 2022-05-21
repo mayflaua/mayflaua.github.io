@@ -1,0 +1,78 @@
+#snake {
+  position: relative;
+  box-shadow: inset 1px 5px 11px rgba(2, 18, 27, 0.71);
+  border-radius: 8px;
+  transition: all 1s ease;
+} 
+
+.snake-window {
+  position:relative;
+}
+
+
+.start-game__button {
+  position: absolute; 
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 110px;
+  height: 40px;
+  font-size: 14px;
+  background-color: rgb(254, 165, 95);
+  border-radius: 0.5em;
+  border: none;
+  color: #01080E;
+  outline: none;
+  bottom: 12%;
+}
+
+.start-again-button {
+  color: rgb(96, 123, 150);
+  background: none;
+
+}
+
+.start-again-button:hover {
+  color: white;
+}
+
+.foods {
+  min-width: 115px;
+  max-width: 115px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border: 1px solid white;
+}
+
+
+.food {
+  width: 0;
+  height: 0;
+  border: 7px solid rgb(67, 217, 173);
+  border-radius: 50%;
+  margin: 4px;
+}
+
+
+.game-over {
+  position: absolute;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 100%;
+  height: 50px;
+  bottom: 25%;
+  text-align: center;
+  color: #43D9AD;
+  font-size: 24px;
+  text-transform: uppercase;
+  line-height: 50px;
+  background: rgba(1, 22, 39, 0.84);
+  box-shadow: inset 1px 5px 11px rgba(2, 18, 27, 0.71);
+  border-radius: 8px;
+}
