@@ -95,11 +95,15 @@ function switchHobbies() {
   // navTitle.innerHTML = "<div class=\"cat-arrow cat-arrow__pers\"></div>hobbies";
   catArrowPersonal = document.querySelector(".cat-arrow__pers");
   document.querySelector(".nav-tree__work_catering").classList.add("invisible");
+  document.querySelector(".nav-tree__bio_childhood").classList.add('invisible');
+  document.querySelector(".nav-tree__bio_present").classList.add('invisible');
   workFolder.classList.add("invisible");
   bioFolder.classList.add("invisible");
+  bioFolder.firstChild.classList.remove("folder-arrow_opened");
   interestsFolder.classList.remove("invisible");
   educationFolder.classList.add("invisible");
   workFolder.firstChild.classList.remove("folder-arrow_opened");
+  
 
   document.querySelector(".nav-tree__work_catering").classList.add("invisible");
   if (catArrowPersonal.classList.contains("cat-arrow_opened")) {

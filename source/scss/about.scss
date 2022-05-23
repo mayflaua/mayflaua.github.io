@@ -84,7 +84,6 @@ body {
 }
 
 .nav-tree__title {
-  background: #1E2D3D;
   color: white;
   text-align: left;
   border-bottom: $border;
@@ -342,6 +341,7 @@ body {
 
   .content-window {
     border-top: none;
+    margin-top: 25px;
   }
 
   .container {
@@ -350,4 +350,8 @@ body {
     border-collapse: collapse;
   }
 
+  .nav-tree__title {
+    background: #1E2D3D;
+
+  }
 }

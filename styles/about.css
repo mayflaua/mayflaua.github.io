@@ -95,7 +95,6 @@ body {
 }
 
 .nav-tree__title {
-  background: #1E2D3D;
   color: white;
   text-align: left;
   border-bottom: 1px solid #1E2D3D;
@@ -356,11 +355,16 @@ body {
 
   .content-window {
     border-top: none;
+    margin-top: 25px;
   }
 
   .container {
     border-left: none;
     min-width: 100%;
     border-collapse: collapse;
+  }
+
+  .nav-tree__title {
+    background: #1E2D3D;
   }
 }
