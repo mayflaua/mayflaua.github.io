@@ -38,3 +38,22 @@ flutterItem.addEventListener("click", function() {
   flutterItem.classList.toggle("nav-tree-content__item_selected");
   flutterItem.children[1].classList.toggle("nav-tree-content__checkbox_selected");
 });
+
+let navTab = document.querySelector(".nav-tree__title");
+let tabArrow = document.querySelector(".nav-tree__title-arrow");
+
+contentText = document.querySelector(".content-text");
+
+navTab.addEventListener('click', function() {
+
+  contentText.classList.toggle("unborn")
+
+  tabArrow.classList.toggle('nav-tree__title-arrow-opened');
+
+  reactItem.classList.toggle("invisible");
+  htmlItem.classList.toggle("invisible");
+  cssItem.classList.toggle("invisible");
+  vueItem.classList.toggle("invisible");
+  angularItem.classList.toggle("invisible");
+  flutterItem.classList.toggle("invisible");
+})

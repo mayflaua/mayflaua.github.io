@@ -49,3 +49,18 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+@media (max-width: 450px) {
+  .footer__link-gh {
+    background-position: center;
+    border-left: none;
+    margin: 0;
+    border-right: 1px solid #1E2D3D;
+    width: 50px;
+    padding: 0;
+
+    & span {
+      display: none;
+    }
+  }
+}

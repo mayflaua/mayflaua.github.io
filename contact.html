@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/text-styles.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="script/contact.js" async></script>
+    <script src="script/burger.js" defer></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/base16/darcula.min.css">
+    <script src="script/highlight.min.js"></script>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>CONTACT ME</title>
+</head>
+<body>
+    <div class="page-container">
+        <!--Header navigation menu-->
+        <nav class="header">
+            <a href="#" class="header-name header-link label">sweetie</a>
+            <div class="burger"><span></span></div>
+            <div class="header-nav">
+                <a href="index.html" class="header-nav__item  header-link label">_hello</a>
+                <a href="about.html" class="header-nav__item header-link label">_about-me</a>
+                <a href="projects.html" class="header-nav__item header-link label">_projects</a>
+                                <!--selected current page-->
+                <a href="#" class="header-nav__contact header_nav__item-selected header-link label">_contact-me</a>
+            </div>
+        </nav>
+        <main class="contact">
+          <nav class="contact-nav">
+              <div class="nav">    
+                  <div class="nav-tree nav-contacts label nav-tab">
+                      <div class="nav-tree__title nav-tree__title_contacts label">
+                        <div class="cat-arrow cat-arrow__contacts"></div>
+                        contacts</div>
+                      <div class="nav-contacts__email label invisible">num1carbon@gmail.com</div>
+                      <div class="nav-contacts__phone label invisible">+79960661541</div>
+                  </div>
+                  <div class="nav-tree nav-findme label nav-tab">
+                    <div class="nav-tree__title nav-tree__title_findme label">
+                      <div class="cat-arrow cat-arrow__findme"></div>
+                      find-me-also-in</div>
+                      <a href="https://github.com/mayflaua" target="_blank" class="nav-findme__gh label invisible">Git Hub</a>
+                      <a href="https://t.me/pogas" target="_blank" class="nav-findme__tg label invisible">Telegram</a>
+                  </div>
+              </div>
+          </nav>
+          <div class="content">
+            <div class="contact-form">
+              <form action="" method="" class="contact-form">
+
+                <label for="name" class="form-name__label label">_name:</label>
+                <input type="text" name="name" class="form-name__input label" required>
+
+                <label for="email" class="form-email__label label">_email:</label>
+                <input type="email" name="email" class="form-email__input label" required>
+
+                <label for="message" class="form-message__label label">_message:</label>
+                <textarea name="message" class="form-message__input label" required></textarea> 
+
+                <button type="submit" class="submit-button code-snippet">submit-message</button>
+
+              </form>
+              
+            </div>
+            <div class="thanks invisible">
+              <div class="thanks__title sub-headline">Thank you! 🤘</div>
+              <div class="thanks__subtitle body-text">Your message has been accepted. You will recieve answer really soon!</div>
+              <button class="thanks-button submit-button label">send-new-message</button>
+            </div>
+            <div class="code">
+              <pre><code class="language-js">
+const button = document.querySelector('.submit-button');
+
+const message = {
+        name: "",
+        email: "",
+        message: "",
+        date: ""
+}
+
+button.addEventListener('click', () => {
+       form.send(message);
+})
+              </code></pre>
+              <script>hljs.highlightAll();</script>
+            </div>
+          </div>
+        </main>
+        <!--Footer-->
+        <footer class="footer">
+            <div class="footer__find-me label">find me in:</div>
+            <a href="#" class="footer__link footer__link-tw"></a>
+            <a href="#" class="footer__link footer__link-fb"></a>
+            <a target="_blank" href="https://github.com/mayflaua" class="footer__link footer__link-gh label"><span>@mayflaua</span></a>
+        </footer>
+    </div>
+</body>
+</html>

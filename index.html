@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="script/snake.js" async></script>
+    <script src="script/burger.js" defer></script>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>HOME</title>
 </head>
 <body>
@@ -18,13 +20,13 @@
         <!--Header navigation menu-->
         <nav class="header">
             <a href="#" class="header-name header-link label">sweetie</a>
-            
+            <div class="burger"><span></span></div>
             <div class="header-nav hidden">
                 <!--selected current page-->
                 <a href="index.html" class="header-nav__item header_nav__item-selected header-link label">_hello</a>
                 <a href="about.html" class="header-nav__item header-link label">_about-me</a>
                 <a href="projects.html" class="header-nav__item header-link label">_projects</a>
-                <a href="#" class="header-nav__contact header-link label">_contact-me</a>
+                <a href="contact.html" class="header-nav__contact header-link label">_contact-me</a>
             </div>
         </nav>
         <!--Home page content container-->
@@ -39,6 +41,7 @@
                     <div class="greeting-subtitle">
                         <span class="greeting-subtitle__game-tip label">// complete the game to continue</span>
                         <span class="greeting-subtitle__git-tip label">// you can also see it on my GitHub page</span>
+                        <span class="greeting-subtitle__git-tip_mobile label">// find my profile on Github:</span>
                         <a target="_blank" href="https://github.com/mayflaua" class="greeting-subtitle__git-link label ">
                             <span class="greeting-subtitle__git-link_blue">const</span>
                             <span class="greeting-subtitle__git-link_green">githubLink</span>

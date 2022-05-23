@@ -9,66 +9,67 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="script/projects.js" defer></script>
+    <script src="script/burger.js" defer></script>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <title>About me</title>
+    <title>PROJECTS</title>
 </head>
 <body>
     <div class="page-container">
         <!--Header navigation menu-->
         <nav class="header">
-            <a href="#" class="header-name header-link label">sweetie</a>
-            <div class="container">
-                <div class="header-nav">
-                    <a href="index.html" class="header-nav__item header-link label">_hello</a>
-                    <a href="about.html" class="header-nav__item header-link label">_about-me</a>
-                    <!--selected current page-->
-                    <a href="projects.html" class="header-nav__item header_nav__item-selected header-link label">_projects</a>
-                </div>
-            </div>
-            <a href="#" class="header-nav__contact header-link label">_contact-me</a>
-        </nav>
+          <a href="#" class="header-name header-link label">sweetie</a>
+          <div class="burger"><span></span></div>
+          <div class="header-nav">
+              <a href="index.html" class="header-nav__item header-link label">_hello</a>
+              <a href="about.html" class="header-nav__item header-link label">_about-me</a>
+              <!--selected current page-->
+              <a href="projects.html" class="header-nav__item header_nav__item-selected header-link label">_projects</a>
+              <a href="contact.html" class="header-nav__contact header-link label">_contact-me</a>
+          </div>
+      </nav>
         <main class="projects">
           <nav class="projects-nav">
             <div class="nav">
                 <div class="nav-tree label nav-tab">
-                    <div class="nav-tree__title label">projects</div>
+                    <div class="nav-tree__title label"><div class="nav-tree__title-arrow"></div>projects</div>
                     <div class="nav-tree-content">
-                      <div class="nav-tree-content__item nav-tree-content__item_react label">
+                      <div class="nav-tree-content__item invisible nav-tree-content__item_react  label">
                         <!-- true checkbox to get rid off -->
                         <input type="checkbox" class="checkbox-hidden">
                         <!-- fake checkbox for customization -->
                         <div class="nav-tree-content__checkbox"></div>
                           React
                       </div>
-                      <div class="nav-tree-content__item nav-tree-content__item_html nav-tree-content__item_selected label">
+                      <div class="nav-tree-content__item invisible nav-tree-content__item_html nav-tree-content__item_selected label">
                         <!-- true checkbox to get rid off -->
                         <input type="checkbox" class="checkbox-hidden">
                         <!-- fake checkbox for customization -->
                         <div class="nav-tree-content__checkbox nav-tree-content__checkbox_selected"></div>
                           HTML
                       </div>
-                      <div class="nav-tree-content__item nav-tree-content__item_css nav-tree-content__item_selected label">
+                      <div class="nav-tree-content__item invisible nav-tree-content__item_css nav-tree-content__item_selected label">
                         <!-- true checkbox to get rid off -->
                         <input type="checkbox" class="checkbox-hidden">
                         <!-- fake checkbox for customization -->
                         <div class="nav-tree-content__checkbox nav-tree-content__checkbox_selected"></div>
                           CSS
                       </div>
-                      <div class="nav-tree-content__item nav-tree-content__item_vue label">
+                      <div class="nav-tree-content__item invisible nav-tree-content__item_vue label">
                         <!-- true checkbox to get rid off -->
                         <input type="checkbox" class="checkbox-hidden">
                         <!-- fake checkbox for customization -->
                         <div class="nav-tree-content__checkbox"></div>
                           Vue
                       </div>
-                      <div class="nav-tree-content__item nav-tree-content__item_angular label">
+                      <div class="nav-tree-content__item invisible nav-tree-content__item_angular label">
                         <!-- true checkbox to get rid off -->
                         <input type="checkbox" class="checkbox-hidden">
                         <!-- fake checkbox for customization -->
                         <div class="nav-tree-content__checkbox"></div>
                           Angular
                       </div>
-                      <div class="nav-tree-content__item nav-tree-content__item_flutter label">
+                      <div class="nav-tree-content__item invisible nav-tree-content__item_flutter label">
                         <!-- true checkbox to get rid off -->
                         <input type="checkbox" class="checkbox-hidden">
                         <!-- fake checkbox for customization -->
@@ -80,7 +81,7 @@
             </div>
         </nav>
         <div class="content">
-          <div class="content-text body-text">
+          <div class="content-text unborn body-text">
             Unfortunately, this site is my first and only project yet. <br>
             Unselected by default technologies haven't been studied by me at the moment of this site creation process.
           </div>

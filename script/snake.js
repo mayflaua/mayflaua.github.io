@@ -217,6 +217,19 @@ document.addEventListener("keydown", function(e) {
   }
 })
 
+document.querySelector(".snake-game__info_arrows-arrowright").addEventListener('click', function() {
+  direction = 2;
+})
+document.querySelector(".snake-game__info_arrows-arrowup").addEventListener('click', function() {
+  direction = 1;
+})
+document.querySelector(".snake-game__info_arrows-arrowdown").addEventListener('click', function() {
+  direction = 3;
+})
+document.querySelector(".snake-game__info_arrows-arrowleft").addEventListener('click', function() {
+  direction = 4;
+})
+
 document.addEventListener("keyup", function(e) {
   // if key is arrow right
   if (e.keyCode == "39") {

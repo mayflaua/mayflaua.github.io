@@ -234,4 +234,3 @@ catContacts.addEventListener('click', function() {
   navTreeContactsEmail.classList.toggle("invisible");
   navTreeContactsPhone.classList.toggle("invisible");
 });
-

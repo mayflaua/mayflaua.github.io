@@ -35,24 +35,37 @@ body {
 .projects-nav {
   width: 25%;  
 }
+
+
 .nav-tree {
+  
   &__title {
     color: white;
     padding: 10px 15px;
     text-align: left;
     border-bottom: $border;
     box-sizing: border-box;
-    &:before {
+    cursor: pointer;
+    &-arrow {
+      transition: all 0.3s ease;
+
+      transform: rotate(-90deg);
+      display:inline-block;
       // white triangle arrow
       margin-right: 10px;
-      content: '';
       font-size: 0;
       width: 0;
       height: 0;
       border-style: solid;
       border-width: 7.4px 4.25px 0 4.25px;
       border-color: #ffffff transparent transparent transparent;
+      
+      &-opened {
+        transform: none;
       }
+    }
+
+
     }
 
   &-content {
@@ -61,6 +74,7 @@ body {
     flex-direction: column;
 
     &__item {
+      transition: all 0.3s ease-out;
       align-items: center;
       display: inline-flex;
       cursor: pointer;
@@ -141,7 +155,39 @@ body {
   width: 75%;
 
   &-text {
+    transition: all 0.3s ease;
     text-align: center;
     padding: 25%;
+    &.unborn {
+      opacity: 0;
+    }
   }
+}
+
+@media (max-width: 768px) {
+  .projects {
+    flex-direction: column;
+
+    &-nav {
+      width: 100%;
+    }
+  }
+  
+  .content {
+    width: 100%;
+  }
+
+  .nav-tree__title {
+    background: #1E2D3D;
+  }
+  
+}
+
+.invisible {
+  visibility: hidden;
+  height: 0;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+  margin: 0;
+  padding: 0;
 }

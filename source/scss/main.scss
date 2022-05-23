@@ -6,12 +6,13 @@ body, html {
 
 body {
     background-color: #010C15;
-    padding: 4%;
+    
 }
 
 
 
 .page-container {
+    margin: 4%;
     max-height: 92%;
     border: 1px solid #1E2D3D;
     box-sizing: border-box;
@@ -27,6 +28,7 @@ body {
 }
 
 .content {
+    transition: all 0.3s ease;
     margin: 180px auto;
     display: flex;
     flex-direction: row;
@@ -35,6 +37,7 @@ body {
 }
 
 @media(max-width: 1600px) {
+  
     .content {
         flex-wrap: wrap;
         justify-content: center;
@@ -157,18 +160,23 @@ body {
     flex-direction: column;
 }
 
-.greeting-title__dev {
-    color: #4D5BCE;
+.greeting-title .greeting-title__dev {
+  color: #4D5BCE;
 }
-
 .greeting-subtitle {
     margin-top: 80px;
     display: flex;
     flex-direction: column;
 }
 
-.greeting-subtitle__game-tip, .greeting-subtitle__git-tip {
+.greeting-subtitle .greeting-subtitle__game-tip,
+.greeting-subtitle .greeting-subtitle__git-tip,
+.greeting-subtitle .greeting-subtitle__git-tip_mobile {
     color: #607B96;
+}
+
+.greeting-subtitle__git-tip_mobile {
+  display: none;
 }
 
 .greeting-subtitle__git-link {
@@ -190,9 +198,7 @@ body {
     text-decoration: underline;
 }
 
-.hidden {
-  visibility: hidden;
-}
+
 
 .skip {
   position: absolute;
