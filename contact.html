@@ -11,8 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="script/contact.js" defer></script>
     <script src="script/burger.js" defer></script>
+    <script src="script/language.js" defer></script>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/base16/darcula.min.css">
-    <script src="script/highlight.min.js" defer></script>
+    <script src="script/highlight.min.js"></script>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>CONTACT ME</title>
 </head>
@@ -20,14 +21,15 @@
     <div class="page-container">
         <!--Header navigation menu-->
         <nav class="header">
-            <a href="#" class="header-name header-link label">sweetie</a>
+            <a href="#" class="header-name header-link label en">danil</a>
+            <span class="lang eng"></span>
             <div class="burger"><span></span></div>
             <div class="header-nav">
-                <a href="index.html" class="header-nav__item  header-link label">_hello</a>
-                <a href="about.html" class="header-nav__item header-link label">_about-me</a>
-                <a href="projects.html" class="header-nav__item header-link label">_projects</a>
+                <a href="index.html" class="header-nav__item  header-link label en">_hello</a>
+                <a href="about.html" class="header-nav__item header-link label en">_about-me</a>
+                <a href="projects.html" class="header-nav__item header-link label en">_projects</a>
                                 <!--selected current page-->
-                <a href="#" class="header-nav__contact header_nav__item-selected header-link label">_contact-me</a>
+                <a href="#" class="header-nav__contact header_nav__item-selected header-link label en">_contact-me</a>
             </div>
         </nav>
         <main class="contact">
@@ -36,14 +38,14 @@
                   <div class="nav-tree nav-contacts label nav-tab">
                       <div class="nav-tree__title nav-tree__title_contacts label">
                         <div class="cat-arrow cat-arrow__contacts"></div>
-                        contacts</div>
+                        <span class="en">contacts</span></div>
                       <div class="nav-contacts__email label invisible">num1carbon@gmail.com</div>
                       <div class="nav-contacts__phone label invisible">+79960661541</div>
                   </div>
                   <div class="nav-tree nav-findme label nav-tab">
                     <div class="nav-tree__title nav-tree__title_findme label">
                       <div class="cat-arrow cat-arrow__findme"></div>
-                      find-me-also-in</div>
+                      <span class="en">find-me-also-in</span></div>
                       <a href="https://github.com/mayflaua" target="_blank" class="nav-findme__gh label invisible">Git Hub</a>
                       <a href="https://t.me/pogas" target="_blank" class="nav-findme__tg label invisible">Telegram</a>
                   </div>
@@ -53,24 +55,24 @@
             <div class="contact-form">
               <form action="" method="" class="contact-form">
 
-                <label for="name" class="form-name__label label">_name:</label>
+                <label for="name" class="form-name__label label en">_name:</label>
                 <input type="text" name="name" class="form-name__input label" required>
 
-                <label for="email" class="form-email__label label">_email:</label>
+                <label for="email" class="form-email__label label en">_email:</label>
                 <input type="email" name="email" class="form-email__input label" required>
 
-                <label for="message" class="form-message__label label">_message:</label>
+                <label for="message" class="form-message__label label en">_message:</label>
                 <textarea name="message" class="form-message__input label" required></textarea> 
 
-                <button type="submit" class="submit-button code-snippet">submit-message</button>
+                <button type="submit" class="submit-button code-snippet en">submit-message</button>
 
               </form>
               
             </div>
             <div class="thanks invisible">
-              <div class="thanks__title sub-headline">Thank you! 🤘</div>
-              <div class="thanks__subtitle body-text">Your message has been accepted. You will recieve answer really soon!</div>
-              <button class="thanks-button submit-button label">send-new-message</button>
+              <div class="thanks__title sub-headline en">Thank you! 🤘</div>
+              <div class="thanks__subtitle body-text en">Your message has been accepted. You will recieve answer really soon!</div>
+              <button class="thanks-button submit-button label en">send-new-message</button>
             </div>
             <div class="code">
               <pre><code class="language-js">
@@ -84,7 +86,7 @@ const message = {
 }
 
 button.addEventListener('click', () => {
-       form.send(message);
+        form.send(message);
 })
               </code></pre>
               <script>hljs.highlightAll();</script>
@@ -93,7 +95,7 @@ button.addEventListener('click', () => {
         </main>
         <!--Footer-->
         <footer class="footer">
-            <div class="footer__find-me label">find me in:</div>
+            <div class="footer__find-me label en">find me in:</div>
             <a href="#" class="footer__link footer__link-tw"></a>
             <a href="#" class="footer__link footer__link-fb"></a>
             <a target="_blank" href="https://github.com/mayflaua" class="footer__link footer__link-gh label"><span>@mayflaua</span></a>

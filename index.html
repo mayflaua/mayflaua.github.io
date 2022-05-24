@@ -10,8 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="script/snake.js" async></script>
+    <script src="script/snake.js" defer></script>
     <script src="script/burger.js" defer></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+    <script src="script/language.js" defer></script>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>HOME</title>
 </head>
@@ -19,14 +21,15 @@
     <div class="page-container">
         <!--Header navigation menu-->
         <nav class="header">
-            <a href="#" class="header-name header-link label">sweetie</a>
+            <a href="#" class="header-name header-link label en">danil</a>
+            <span class="lang eng"></span>
             <div class="burger"><span></span></div>
             <div class="header-nav hidden">
                 <!--selected current page-->
-                <a href="index.html" class="header-nav__item header_nav__item-selected header-link label">_hello</a>
-                <a href="about.html" class="header-nav__item header-link label">_about-me</a>
-                <a href="projects.html" class="header-nav__item header-link label">_projects</a>
-                <a href="contact.html" class="header-nav__contact header-link label">_contact-me</a>
+                <a href="index.html" class="header-nav__item header_nav__item-selected header-link label en">_hello</a>
+                <a href="about.html" class="header-nav__item header-link label en">_about-me</a>
+                <a href="projects.html" class="header-nav__item header-link label en">_projects</a>
+                <a href="contact.html" class="header-nav__contact header-link label en">_contact-me</a>
             </div>
         </nav>
         <!--Home page content container-->
@@ -34,14 +37,14 @@
             <div class="content">
                 <div class="greeting">
                     <div class="greeting-title">
-                        <span class="greeting-title__hi body-text">Hi all. I am</span>
-                        <span class="greeting-title__name headline">Daniil Sweetie</span>
-                        <span class="greeting-title__dev sub-headline">> Front-end developer</span>
+                        <span class="greeting-title__hi body-text en">Hi all. I am</span>
+                        <span class="greeting-title__name headline en">Daniil Fomichev</span>
+                        <span class="greeting-title__dev sub-headline en">> Front-end developer</span>
                     </div>
                     <div class="greeting-subtitle">
-                        <span class="greeting-subtitle__game-tip label">// complete the game to continue</span>
-                        <span class="greeting-subtitle__git-tip label">// you can also see it on my GitHub page</span>
-                        <span class="greeting-subtitle__git-tip_mobile label">// find my profile on Github:</span>
+                        <span class="greeting-subtitle__game-tip label en">// complete the game to continue</span>
+                        <span class="greeting-subtitle__git-tip label en">// you can also see it on my GitHub page</span>
+                        <span class="greeting-subtitle__git-tip_mobile label en">// find my profile on Github:</span>
                         <a target="_blank" href="https://github.com/mayflaua" class="greeting-subtitle__git-link label ">
                             <span class="greeting-subtitle__git-link_blue">const</span>
                             <span class="greeting-subtitle__git-link_green">githubLink</span>
@@ -53,21 +56,20 @@
                 <div class="snake-game">
                   <div class="snake-game__game">
                     <canvas id="snake" width="240" height="420">snake game</canvas>
-                    <button id="start-game__button" class="start-game__button play-again-button">start-game
-                    </button>
-                    <div id="game-over" class="game-over" hidden>game over!</div>
+                    <button id="start-game__button" class="start-game__button play-again-button en">start-game</button>
+                    <div id="game-over" class="game-over en" hidden>game over!</div>
                   </div>
                   <div class="snake-game__info">
                     <div class="snake-game__info_arrows">
-                      <div class="snake-game__info_arrows-text code-snippet">// use keyboard</div>
-                      <div class="snake-game__info_arrows-text code-snippet">// arrows to play</div>
+                      <div class="snake-game__info_arrows-text code-snippet en">// use keyboard</div>
+                      <div class="snake-game__info_arrows-text code-snippet en">// arrows to play</div>
                       <div class="snake-game__info_arrows-arrowup"></div>
                       <div class="snake-game__info_arrows-arrowleft"></div>
                       <div class="snake-game__info_arrows-arrowdown"></div>
                       <div class="snake-game__info_arrows-arrowright"></div>
 
                     </div>
-                  <div class="snake-game__info_foodleft code-snippet">// food left</div>
+                  <div class="snake-game__info_foodleft code-snippet en">// food left</div>
                   <div class="snake-game__info_foods">
                     <div class="snake-game__info_foods-food"></div>
                     <div class="snake-game__info_foods-food"></div>
@@ -80,14 +82,14 @@
                     <div class="snake-game__info_foods-food"></div>
                     <div class="snake-game__info_foods-food"></div>
                   </div>
-                  <button class="skip code-snippet">skip</button>
+                  <button class="skip code-snippet en">skip</button>
                 </div>
                 </div>
             </div>
         </main>
         <!--Footer-->
         <footer class="footer">
-            <div class="footer__find-me label">find me in:</div>
+            <div class="footer__find-me label en">find me in:</div>
             <a href="#" class="footer__link footer__link-tw"></a>
             <a href="#" class="footer__link footer__link-fb"></a>
             <a target="_blank" href="https://github.com/mayflaua" class="footer__link footer__link-gh label"><span>@mayflaua</span></a>

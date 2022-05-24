@@ -199,6 +199,22 @@
   }
 }
 .hidden {
+  display: none;
   visibility: hidden;
   opacity: 0;
+}
+
+.invisible {
+  opacity: 0;
+}
+
+.lang {
+  margin-right: 10px;
+  color: #4D5BCE;
+}
+.lang.eng:before {
+  content: "en";
+}
+.lang.rus:before {
+  content: "ru";
 }

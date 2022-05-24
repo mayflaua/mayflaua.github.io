@@ -1,3 +1,4 @@
+
 function getRandomCoord(max) {
   // returns random coordinate from 0 to max
   let num = Math.random() * max;
@@ -92,24 +93,28 @@ function drawStartGameText() {
 }
 
 function drawStartAgainButton() {
-  startButton.innerHTML = "start-again";
+  if (LANGUAGE == 'en') startButton.innerHTML = "start-again";
+  else startButton.innerHTML = "ещё-раз";
   startButton.removeAttribute("hidden");
   startButton.classList.add("start-again-button")
 }
 
 function drawPlayAgainButton() {
-  startButton.innerHTML = "play-again";
+  if (LANGUAGE == 'en') startButton.innerHTML = "play-again";
+  else startButton.innerHTML = "сыграть-ещё";
   startButton.removeAttribute("hidden");
   startButton.classList.add("start-again-button")
 }
 
 function drawGameOver() {
-  gameOver.innerHTML = "game over!";
+  if (LANGUAGE == 'en') gameOver.innerHTML = "game over!";
+  else gameOver.innerHTML = "игра окончена!"
   gameOver.removeAttribute("hidden");
 }
 
 function drawWellDone() {
-  gameOver.innerHTML = "well done!";
+  if (LANGUAGE == 'en ') gameOver.innerHTML = "well done!";
+  else gameOver.innerHTML = "отлично!";
   gameOver.removeAttribute("hidden");
   navBar.classList.remove("hidden");
 }
@@ -299,12 +304,6 @@ skipButton.addEventListener('click', function() {
 
   drawWellDone();
 })  
-
-
-
-
-
-
 
 
 

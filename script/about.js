@@ -65,10 +65,14 @@ function switchProffesional() {
   educationFolder.firstChild.classList.remove("folder-arrow_opened");
   bioFolder.firstChild.classList.remove("folder-arrow_opened");
   if (catArrowPersonal.classList.contains("cat-arrow_opened")) {
-    navTitle.innerHTML = "<div class=\"cat-arrow cat-arrow__pers cat-arrow_opened\"></div>professional-info";
+    if (LANGUAGE == 'en') navTitle.innerHTML = "<div class=\"cat-arrow cat-arrow__pers cat-arrow_opened\"></div>professional-info";
+    else navTitle.innerHTML = "<div class=\"cat-arrow cat-arrow__pers cat-arrow_opened\"></div>профессиональная-информация";
+    
   }
   else {
-    navTitle.innerHTML = "<div class=\"cat-arrow cat-arrow__pers\"></div>professional-info";
+    if (LANGUAGE == 'en') navTitle.innerHTML = "<div class=\"cat-arrow cat-arrow__pers\"></div>professional-info";
+    else navTitle.innerHTML = "<div class=\"cat-arrow cat-arrow__pers\"></div>профессиональная-информация";
+    
   }
   catArrowPersonal = document.querySelector(".cat-arrow__pers");
 }
@@ -83,10 +87,13 @@ function switchPersonal() {
   catArrowPersonal = document.querySelector(".cat-arrow__pers");
   document.querySelector(".nav-tree__work_catering").classList.add("invisible");
   if (catArrowPersonal.classList.contains("cat-arrow_opened")) {
-    navTitle.innerHTML = "<div class=\"cat-arrow cat-arrow__pers cat-arrow_opened\"></div>personal-info";
+    if (LANGUAGE == 'en') navTitle.innerHTML = "<div class=\"cat-arrow cat-arrow__pers cat-arrow_opened\"></div>personal-info";
+    else navTitle.innerHTML = "<div class=\"cat-arrow cat-arrow__pers cat-arrow_opened\"></div>личная-информация";
+    
   }
   else {
-    navTitle.innerHTML = "<div class=\"cat-arrow cat-arrow__pers\"></div>personal-info";
+    if (LANGUAGE == 'en') navTitle.innerHTML = "<div class=\"cat-arrow cat-arrow__pers\"></div>personal-info";
+    else navTitle.innerHTML = "<div class=\"cat-arrow cat-arrow__pers\"></div>личная-информация";
   }
   catArrowPersonal = document.querySelector(".cat-arrow__pers");
 }
@@ -107,10 +114,13 @@ function switchHobbies() {
 
   document.querySelector(".nav-tree__work_catering").classList.add("invisible");
   if (catArrowPersonal.classList.contains("cat-arrow_opened")) {
-    navTitle.innerHTML = "<div class=\"cat-arrow cat-arrow__pers cat-arrow_opened\"></div>hobbies ";
+    if (LANGUAGE == 'en') navTitle.innerHTML = "<div class=\"cat-arrow cat-arrow__pers cat-arrow_opened\"></div>hobbies ";
+    else navTitle.innerHTML = "<div class=\"cat-arrow cat-arrow__pers cat-arrow_opened\"></div>увлечения";
   }
   else {
-    navTitle.innerHTML = "<div class=\"cat-arrow cat-arrow__pers\"></div>hobbies";
+    if (LANGUAGE == 'en') navTitle.innerHTML = "<div class=\"cat-arrow cat-arrow__pers\"></div>hobbies";
+    else navTitle.innerHTML = "<div class=\"cat-arrow cat-arrow__pers\"></div>увлечения";
+    
   }
   catArrowPersonal = document.querySelector(".cat-arrow__pers");
 }
@@ -147,19 +157,31 @@ let tabTitle = document.querySelector(".content-tab");
 let slider = document.querySelector(".content-window-slider");
 
 
+let childhood, present, code, tech, school, university, catering;
 
-let childhood = toList("childhood");
-let present = toList("present");
-let code = toList("code");
-let tech = toList("tech");
-let school = toList("school");
-let university = toList("university");
 
-let catering = toList("catering");
+
 
 
 document.querySelector(".nav-tree-content").addEventListener("click", function(e) {
-  
+  if (LANGUAGE == 'en') {
+    childhood = toList("What can I say? I wasn't a genius, top tier brawl stars player or cryptotrader and nft reseller. I've been eating sand. and beating nettle with a stick (a very powerful stick)");
+    present = toList("Right now I'm trying myself in frontend development, as you may have been noticed I do that living in Cheboxary, Russia, but one day...");
+    code = toList("My first coding experience was pretty long ago, 6-7 years I guess it was php development on php devel studio with almost no codejava, c++, Pascal, Basic, PHP, delphi, ruby, python, game development, game design, mobile development , ux/ui, cyber security, that's everything i can remember I've been trying to learn I tried - I failed - I waited - I tried again, but something new this been happening for a long time, but some unexpected thing happened to me...to be continued on work/catering");
+    tech = toList("Coding wasn't the only think I liked - technologies are great at all! devices, electronics - all of them! But I never tried to go deep in most difficult things due to physics ignorance but this smart home things..it beckons..");
+    school = toList("There's not that much what I can say - I was a geek with only couple geek friends? Who likes skinny guys with glasses and self-esteem troubles?.. Until they need help with English or Informatics?😃 By the way, when I started going to the gym, I understood that geeks can be fit. and so was i. not for long unfortunately");
+    university = toList("I entered the Kazan Innovation University at the Faculty of Applied Informatics, but half year later I dropped out. Expensive and quite useless - I could learn everything by myself. But the decision was to live in the moment. It's continued for almost 3 years..");
+    catering = toList("After dropping out of universuty, unfortunately I was absorbed by public catering. For three years I've been working as a cook at cafes firstly in my town, then in Cheboxary. I liked it for some time honestly, until I wanted to get IT profession again.");
+ }
+ else {
+    childhood = toList("Что я могу сказать? Я не был гением, топ игроком в brawl stars или криптотрейдером и реселлером. Я ел песок. И бил крапиву палкой (очень мощной палкой)");
+    present = toList("Прямо сейчас я пробую себя в frontend разработке , как вы, возможно, заметили. Сейчас я занимаюсь этим в Чебоксарах, но однажды...");
+    code = toList("Мой первый опыт программирования был довольно давно, около 6-7 лет назад, это была php разработка на php devel studio почти без кода. Java, C++, Pascal, Basic, PHP, delphi, ruby, python, разработка игр, дизайн игр, разработка для мобильных устройств, ux/ui, кибербезопасность, это все, что я могу вспомнить, чему я пытался научитьсяю Я пытался - у меня не получалось - Проходило время - я попробовал снова, но что-то новое. Это продолжалось долго, пока не произошло... продолжение в работа/общепит");
+    tech = toList("Не только программирование мне нравилось - технологии в принципе прикольные! Компы, электроника - все это! Но я никогда не пытался углубляться в некоторые сложные вещи из-за незнания физики, но эти девайсы для умного дома..так и манят..");
+    school = toList("Я не так уж много могу сказать - я был задротом, у которого была всего пара друзей, тоже гиков. Кому нравятся худые парни в очках и с проблемами с самооценкой?.. Пока им не понадобится помощь с английским или информатикой😃 Кстати, когда я начал ходить в спортзал, я понял, что задроты могут быть в форме. Я был. К сожалению, недолго");
+    university = toList("Я поступил в Казанский Инновационный Университет на факультет прикладной информатики, но через полгода бросил учебу. Дорого и бесполезно - я мог бы научиться всему сам. Но решил жить моментом. Это продолжается уже почти 3 года..");
+    catering = toList("После того, как я бросил университет, к сожалению, я попал в общепит. Вот уже три года я работаю поваром в кафешках сначала в своем городе, потом в Чебоксарах. Честно говоря, мне это нравилось какое-то время, пока я снова не захотел войти в айти.");
+ }
   function openTab() {
     tabTitle.style.visibility = "visible";
     contentText.style.visibility = "visible";
@@ -167,43 +189,50 @@ document.querySelector(".nav-tree-content").addEventListener("click", function(e
   }
 
   if (e.target.classList.contains("nav-tree__bio_childhood")) {
-    tabTitle.innerHTML = "childhood" + "<button class=\"close\">x</button>";
+    if (LANGUAGE == 'en') tabTitle.innerHTML = "childhood" + "<button class=\"close\">x</button>";
+    else tabTitle.innerHTML = "детство" + "<button class=\"close\">x</button>";
     contentText.innerHTML = childhood;
     openTab();
   }
 
   else if (e.target.classList.contains("nav-tree__bio_present")) {
-    tabTitle.innerHTML = "present" + "<button class=\"close\">x</button>";
+    if (LANGUAGE == 'en') tabTitle.innerHTML = "present" + "<button class=\"close\">x</button>";
+    else tabTitle.innerHTML = "настоящее" + "<button class=\"close\">x</button>";
     contentText.innerHTML = present;
     openTab();
   }
 
   else if (e.target.classList.contains("nav-tree__interests_code")) {
-    tabTitle.innerHTML = "coding" + "<button class=\"close\">x</button>";
+    if (LANGUAGE == 'en') tabTitle.innerHTML = "code" + "<button class=\"close\">x</button>";
+    else tabTitle.innerHTML = "программирование" + "<button class=\"close\">x</button>";
     contentText.innerHTML = code;
     openTab();
   }
 
   else if (e.target.classList.contains("nav-tree__interests_tech")) {
-    tabTitle.innerHTML = "tech" + "<button class=\"close\">x</button>";
+    if (LANGUAGE == 'en') tabTitle.innerHTML = "tech" + "<button class=\"close\">x</button>";
+    else tabTitle.innerHTML = "технологии" + "<button class=\"close\">x</button>";
     contentText.innerHTML = tech;
     openTab();
   }
 
   else if (e.target.classList.contains("nav-tree__education_school")) {
-    tabTitle.innerHTML = "school" + "<button class=\"close\">x</button>";
+    if (LANGUAGE == 'en') tabTitle.innerHTML = "school" + "<button class=\"close\">x</button>";
+    else tabTitle.innerHTML = "школа" + "<button class=\"close\">x</button>";
     contentText.innerHTML = school;
     openTab();
   }
 
   else if (e.target.classList.contains("nav-tree__education_university")) {
-    tabTitle.innerHTML = "university" + "<button class=\"close\">x</button>";
+    if (LANGUAGE == 'en') tabTitle.innerHTML = "university" + "<button class=\"close\">x</button>";
+    else tabTitle.innerHTML = "университет" + "<button class=\"close\">x</button>";
     contentText.innerHTML = university;
     openTab();
   }
 
   else if (e.target.classList.contains("nav-tree__work_catering")) {
-    tabTitle.innerHTML = "catering" + "<button class=\"close\">x</button>";
+    if (LANGUAGE == 'en') tabTitle.innerHTML = "catering" + "<button class=\"close\">x</button>";
+    else tabTitle.innerHTML = "общепит" + "<button class=\"close\">x</button>";
     contentText.innerHTML = catering;
     openTab();
   }

@@ -198,6 +198,23 @@
 
 
 .hidden {
+  display: none;
   visibility: hidden;
   opacity: 0;
+}
+
+.invisible {
+  opacity: 0;
+}
+
+.lang {
+  margin-right: 10px;
+  color: #4D5BCE;
+
+  &.eng:before {
+    content: 'en';
+  }
+  &.rus:before {
+    content: 'ru';
+  }
 }
