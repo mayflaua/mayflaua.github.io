@@ -188,13 +188,17 @@ body {
   }
 }
 
+main.invisible {
+  height: 100%;
+}
+
+.thanks.invisible,
+.contact-form.invisible,
 .invisible {
-  position: absolute;
   visibility: hidden;
-  height: 0;
   width: 0;
+  height: 0;
   opacity: 0;
-  transition: all 0.3s ease-out;
   margin: 0;
   padding: 0;
 }

@@ -181,6 +181,10 @@ body {
     background: #1E2D3D;
   }
 }
+main.invisible {
+  height: 100%;
+}
+
 .invisible {
   visibility: hidden;
   height: 0;

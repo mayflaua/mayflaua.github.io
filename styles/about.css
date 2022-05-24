@@ -286,6 +286,10 @@ body {
           transform: rotate(90deg);
 }
 
+main.invisible {
+  height: 100%;
+}
+
 .invisible {
   visibility: hidden;
   height: 0;

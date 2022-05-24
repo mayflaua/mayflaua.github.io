@@ -280,6 +280,10 @@ body {
   }
 }
 
+main.invisible {
+  height: 100%;
+}
+
 .invisible {
   visibility: hidden;
   height: 0;

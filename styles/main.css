@@ -20,6 +20,8 @@ body {
 }
 
 .container {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   width: 55%;
   margin: 0 auto;
 }
