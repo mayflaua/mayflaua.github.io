@@ -197,9 +197,9 @@ game = function() {
 
 // arrow keys listener
 document.addEventListener("keydown", function(e) {
+  e.preventDefault();
   // if key is arrow right
   if (e.keyCode == "39" && direction !== 4 && !movePassed) {
-    e.preventDefault();
     document.querySelector(".snake-game__info_arrows-arrowright").style.opacity = 0.6;
     direction = 2; 
 
@@ -207,7 +207,6 @@ document.addEventListener("keydown", function(e) {
   }
   // if key is arrow down
   if (e.keyCode == "40" && direction !== 1 && !movePassed) {
-    e.preventDefault();
     document.querySelector(".snake-game__info_arrows-arrowdown").style.opacity = 0.6;
     direction = 3; 
 
@@ -215,7 +214,6 @@ document.addEventListener("keydown", function(e) {
   }
   // if key is arrow left
   if (e.keyCode == "37" && direction !== 2 && !movePassed) {
-    e.preventDefault();
     document.querySelector(".snake-game__info_arrows-arrowleft").style.opacity = 0.6;
     direction = 4; 
 
@@ -223,7 +221,6 @@ document.addEventListener("keydown", function(e) {
   }
   // if key is arrow up
   if (e.keyCode == "38" && direction !== 3 && !movePassed) {
-    e.preventDefault();
     document.querySelector(".snake-game__info_arrows-arrowup").style.opacity = 0.6;
     direction = 1; 
 
@@ -257,25 +254,23 @@ document.querySelector(".snake-game__info_arrows-arrowleft").addEventListener('c
 })
 
 document.addEventListener("keyup", function(e) {
+  e.preventDefault();
+
   // if key is arrow right
   if (e.keyCode == "39") {
-    e.preventDefault();
     document.querySelector(".snake-game__info_arrows-arrowright").style.opacity = 1;
   }
   // if key is arrow down
   if (e.keyCode == "40") {
-    e.preventDefault();
     document.querySelector(".snake-game__info_arrows-arrowdown").style.opacity = 1;
   }
   // if key is arrow left
   if (e.keyCode == "37") {
-    e.preventDefault();
     document.querySelector(".snake-game__info_arrows-arrowleft").style.opacity = 1;
   }
   // if key is arrow up
   if (e.keyCode == "38") {
     document.querySelector(".snake-game__info_arrows-arrowup").style.opacity = 1;
-    e.preventDefault();
   }
 })
 
