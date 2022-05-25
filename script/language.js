@@ -70,7 +70,10 @@ function load_script() {
     head.removeChild(oldScript);
    }
   }
-let LANGUAGE = 'en';
+
+
+let LANGUAGE;
+
 
 let words = document.querySelectorAll('.en');
 let nameTag = document.querySelector('.header-name');
@@ -105,8 +108,14 @@ function switchLang() {
     }
   }
 
-  if (LANGUAGE == 'ru') LANGUAGE = 'en'; 
-  else LANGUAGE = 'ru';
+  if (LANGUAGE == 'ru') {
+    LANGUAGE = 'en'; 
+    window.sessionStorage.setItem('LANGUAGE', 'en');
+  }
+  else { 
+    LANGUAGE = 'ru';
+    window.sessionStorage.setItem('LANGUAGE', 'ru');
+  }
   dict = swap(dict);
   load_script();
 
@@ -121,3 +130,6 @@ let switchLangAnimTiming = {
   duration: 400,
   iterations: 1,
 }
+
+if (window.sessionStorage.getItem('LANGUAGE') == 'ru') switchLang();
+else LANGUAGE = 'en';

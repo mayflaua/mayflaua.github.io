@@ -193,6 +193,7 @@ body {
 
 main.invisible {
   height: 100%;
+  width: 100%;
 }
 
 .thanks.invisible,
