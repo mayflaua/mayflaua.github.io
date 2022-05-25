@@ -113,13 +113,15 @@ function drawGameOver() {
 }
 
 function drawWellDone() {
-  if (LANGUAGE == 'en ') gameOver.innerHTML = "well done!";
+  if (LANGUAGE == 'en') gameOver.innerHTML = "well done!";
   else gameOver.innerHTML = "отлично!";
   gameOver.removeAttribute("hidden");
   navBar.classList.remove("hidden");
 }
-// main game function
+let movePassed;
 game = function() {
+  // move passed per step indicator
+  movePassed = false;
 
   // make everything shine
   context.shadowColor=appleColor;
@@ -196,43 +198,62 @@ game = function() {
 // arrow keys listener
 document.addEventListener("keydown", function(e) {
   // if key is arrow right
-  if (e.keyCode == "39" && direction !== 4) {
+  if (e.keyCode == "39" && direction !== 4 && !movePassed) {
     e.preventDefault();
-      document.querySelector(".snake-game__info_arrows-arrowright").style.opacity = 0.6;
-      direction = 2; 
+    document.querySelector(".snake-game__info_arrows-arrowright").style.opacity = 0.6;
+    direction = 2; 
+
+    movePassed = true;
   }
   // if key is arrow down
-  if (e.keyCode == "40" && direction !== 1) {
+  if (e.keyCode == "40" && direction !== 1 && !movePassed) {
     e.preventDefault();
     document.querySelector(".snake-game__info_arrows-arrowdown").style.opacity = 0.6;
-      direction = 3; 
+    direction = 3; 
+
+    movePassed = true;
   }
   // if key is arrow left
-  if (e.keyCode == "37" && direction !== 2) {
+  if (e.keyCode == "37" && direction !== 2 && !movePassed) {
     e.preventDefault();
     document.querySelector(".snake-game__info_arrows-arrowleft").style.opacity = 0.6;
+    direction = 4; 
 
-      direction = 4; 
+    movePassed = true;
   }
   // if key is arrow up
-  if (e.keyCode == "38" && direction !== 3) {
-    document.querySelector(".snake-game__info_arrows-arrowup").style.opacity = 0.6;
+  if (e.keyCode == "38" && direction !== 3 && !movePassed) {
     e.preventDefault();
-      direction = 1; 
+    document.querySelector(".snake-game__info_arrows-arrowup").style.opacity = 0.6;
+    direction = 1; 
+
+    movePassed = true;
   }
 })
 
 document.querySelector(".snake-game__info_arrows-arrowright").addEventListener('click', function() {
-  direction = 2;
+  if (direction !== 4 && !movePassed)  {
+    direction = 2;
+    movePassed = true;
+  }
 })
 document.querySelector(".snake-game__info_arrows-arrowup").addEventListener('click', function() {
-  direction = 1;
+  if (direction !== 3 && !movePassed) {
+    direction = 1;
+    movePassed = true;
+  }
 })
 document.querySelector(".snake-game__info_arrows-arrowdown").addEventListener('click', function() {
-  direction = 3;
+  if (direction !== 1 && !movePassed) { 
+    direction = 3;
+    movePassed = true;
+  }
 })
 document.querySelector(".snake-game__info_arrows-arrowleft").addEventListener('click', function() {
-  direction = 4;
+  if (direction !== 2 && !movePassed) {
+   direction = 4;
+   movePassed = true;
+  } 
 })
 
 document.addEventListener("keyup", function(e) {
